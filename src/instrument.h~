@@ -1,0 +1,25 @@
+// Includes
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
+
+#include <jack/jack.h>
+
+// Definitions
+#define PI 3.14
+#define SAMPERSEC 100
+#define WAVE_TYPE_COUNT 1
+#define RES_FRE 30
+typedef jack_default_audio_sample_t sample_t;
+
+// Structures
+
+
+// Prototypes
+int process(jack_nframes_t nframes, void *arg);
+int srate(jack_nframes_t nframes, void *arg);
+void error(const char *desc);
+void jack_shutdown(void *arg);
+sample_t* storeWaves(int num);

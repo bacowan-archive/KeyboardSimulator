@@ -1,0 +1,6 @@
+#!/bin/bash
+# while true; do
+#	ps -ef | grep -v grep | grep pactl\ load-module\ module-jack-sink > /dev/null || pactl load-module module-jack-sink
+#	sleep 2
+# done
+pactl load-module module-jack-sink
